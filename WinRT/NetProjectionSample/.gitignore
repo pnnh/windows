@@ -1,0 +1,7 @@
+.vs/
+_build/
+packages/
+bin/
+obj/
+Generated Files/
+*.nupkg
