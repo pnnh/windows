@@ -1,0 +1,6 @@
+bin/
+obj/
+vcpkg_installed/
+x64/
+.vs/
+ARM64/
