@@ -2,6 +2,7 @@
 #include "Helper.h"
 
 #pragma managed(push, off)
+#include <memory>
 #include <spdlog/spdlog.h>
 #include <spdlog/sinks/msvc_sink.h>
 
