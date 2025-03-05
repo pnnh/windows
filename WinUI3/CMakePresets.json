@@ -1,0 +1,32 @@
+﻿{
+    "version": 3,
+    "configurePresets": [
+        {
+            "name": "arm64-debug",
+            "displayName": "arm64 Debug", 
+            "generator": "Visual Studio 17 2022",
+            "binaryDir": "${sourceDir}/out/build/${presetName}",
+            "installDir": "${sourceDir}/out/install/${presetName}",
+            "toolchainFile": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake",
+            "condition": {
+              "type": "equals",
+              "lhs": "${hostSystemName}",
+              "rhs": "Windows"
+            },
+            "architecture": {
+                "value": "arm64",
+                "strategy": "external"
+            },
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug",
+                "VCPKG_TARGET_TRIPLET": "arm64-windows"
+            }
+        }
+    ],
+    "buildPresets": [
+      {
+        "name": "arm64-debug",
+        "configurePreset": "arm64-debug"
+      }
+    ]
+}
